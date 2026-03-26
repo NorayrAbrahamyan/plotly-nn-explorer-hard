@@ -1,0 +1,61 @@
+import pandas as pd
+import plotly.graph_objects as go
+
+df = pd.read_csv("data/dataset.csv")
+
+data0 = df[df['label'] == 0]
+data1 = df[df['label'] == 1]
+
+class0 = go.Scatter3d(
+    x = data0['x'],
+    y = data0['y'],
+    z = data0['z'],
+    mode = 'markers',
+    marker = dict(size = 4, opacity=0.7),
+    name = 'class 0'
+)
+
+class1 = go.Scatter3d(
+    x = data1['x'],
+    y = data1['y'],
+    z = data1['z'],
+    mode = 'markers',
+    marker = dict(size = 4, opacity = 0.7),
+    name = 'class 1'
+)
+
+fig = go.Figure(data = [class0, class1])
+
+fig.update_layout(
+    title = '3D Interactive scatter plot', 
+    template = 'plotly_dark',
+    scene = dict(
+        xaxis_title = 'x',
+        yaxis_title = 'y',
+        zaxis_title = 'z'
+    ),
+    updatemenus = [
+        dict(
+            type = 'buttons',
+            buttons = [
+                dict(
+                    label = 'show all',
+                    method = 'update',
+                    args = [{'visible': [True, True]}]
+                ),
+                dict(
+                    label = 'class 0',
+                    method = 'update',
+                    args = [{'visible': [True, False]}]
+                ),
+                dict(
+                    label = 'class 1',
+                    method = 'update',
+                    args = [{'visible': [False, True]}]
+                ),
+            ]
+        )
+    ]
+)
+
+fig.write_html('outputs/scatter3d.html')
