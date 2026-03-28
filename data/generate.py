@@ -18,6 +18,8 @@ def generate_dataset(n_samples: int = 1500, noise: float = 0.3, random_state: in
 
     X0 = np.vstack((x0, y0, z0)).T
     X1 = np.vstack((x1, y1, z1)).T
+    X0 += np.random.normal(0, noise, X0.shape)
+    X1 += np.random.normal(0, noise, X1.shape)
     y0 = np.zeros(n_class)
     y1 = np.ones(n_class)
 
