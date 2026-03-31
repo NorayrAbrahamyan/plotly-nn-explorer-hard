@@ -29,7 +29,7 @@ def train_model():
     X = df[['x', 'y', 'z']].values.astype(float)
     y = df['label'].values.astype(float).reshape(-1, 1)
 
-    n_epochs = 150
+    n_epochs = 200
     model = FeedforwardNN() 
     crit = nn.BCELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.03)
