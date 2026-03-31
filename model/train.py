@@ -10,11 +10,11 @@ from sklearn.preprocessing import StandardScaler
 class FeedforwardNN(nn.Module):
     def __init__(self):
         super().__init__()
-        self.fc1 = nn.Linear(3, 16)
+        self.fc1 = nn.Linear(3, 20)
         self.relu1 = nn.ReLU()
-        self.fc2 = nn.Linear(16, 16)
+        self.fc2 = nn.Linear(20, 20)
         self.relu2 = nn.ReLU()
-        self.fc3 = nn.Linear(16, 1)
+        self.fc3 = nn.Linear(20, 1)
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
