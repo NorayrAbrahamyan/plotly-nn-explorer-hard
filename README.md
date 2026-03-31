@@ -18,6 +18,6 @@ Several visualizations are implemented to better understand the model:
 * A 3D decision boundary surface, showing how the model separates the two classes
 * A loss landscape visualization, showing how the loss changes when modifying model weights
 
-All components are connected through a single entry point (`main.py`), which runs the entire pipeline and generates all outputs.
+All components are connected through a single entry point (main.py), which runs the entire pipeline and generates all outputs.
 
 The goal of the project is to combine model implementation with visual analysis in order to better understand neural network behavior in a non-linear setting.
