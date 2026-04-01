@@ -1,5 +1,6 @@
 venv/
 __pycache__/
 *.pyc
-outputs/
+outputs/*.html
 .DS_Store
+.images/

@@ -17,7 +17,7 @@ Several visualizations are implemented to better understand the model:
 ![3d scatter2](.images/3dscatter2.png)
 ![3d scatter3](.images/3dscatter3.png)
 - Training curves, illustrating the learning process over epochs  
-![Training curves](outputs/training_curves.png)
+![Training curves](.images/training_curves.png)
 - A 3D decision boundary surface, showing how the model separates the two classes
 ![Decision Surface 0.3](.images/3ddec0.3.png)
 ![Decision Surface 0.4](.images/3ddec0.4.png)
