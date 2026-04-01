@@ -3,6 +3,12 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 def training_curves():
+    """
+    Plots the training and validation history from a JSON file.
+    This function creates two side-by-side graphs: one for Loss and one 
+    for Accuracy. It also marks the 'best epoch' where the validation 
+    loss was at its lowest point.
+    """
     with open('model/history.json', 'r') as f:
         history = json.load(f)
 

@@ -6,6 +6,12 @@ from viz.decision_surface import decision_surface
 from viz.loss_landscape import loss_landscape
 
 def main():
+    """
+    Runs the complete machine learning pipeline.
+    This function generates the data, saves it to a CSV file, trains the 
+    neural network, and creates all the interactive 3D visualizations 
+    to analyze the results.
+    """
     #Generate dataset
     df = generate_dataset()
     df.to_csv("data/dataset.csv", index=False)

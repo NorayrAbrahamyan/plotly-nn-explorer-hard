@@ -2,6 +2,12 @@ import pandas as pd
 import plotly.graph_objects as go
 
 def scatter():
+    """
+    Creates an interactive 3D scatter plot of the dataset.
+    This function labels and colors the data points by class (0 and 1). 
+    It includes buttons to toggle the visibility of each class, helping 
+    to see how the groups are mixed or separated in 3D space
+    """
     df = pd.read_csv("data/dataset.csv")
 
     data0 = df[df['label'] == 0]

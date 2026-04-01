@@ -2,6 +2,9 @@ import numpy as np
 import pandas as pd
 
 def generate_dataset(n_samples: int = 1500, noise: float = 0.3, random_state: int = 42):
+    """
+    generates non-linearly separable 3d spiral dataset  
+    """
     np.random.seed(random_state)
     n_class = n_samples // 2
     

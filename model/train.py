@@ -25,6 +25,12 @@ class FeedforwardNN(nn.Module):
 
 
 def train_model():
+    """
+    Trains the neural network using the generated 3D dataset.
+    This function loads the data, scales it, and splits it into train and 
+    validation sets. It then runs the training loop, saves the loss/accuracy 
+    history to a JSON file, and saves the final model weights.
+    """
     df = pd.read_csv('data/dataset.csv')
     X = df[['x', 'y', 'z']].values.astype(float)
     y = df['label'].values.astype(float).reshape(-1, 1)

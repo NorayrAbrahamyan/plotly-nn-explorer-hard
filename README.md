@@ -6,18 +6,26 @@ The dataset consists of two interleaved spirals in 3D space, making it a non-lin
 
 The project includes the full pipeline:
 
-* Generation of the dataset
-* Training of a neural network using PyTorch
-* Tracking training metrics (loss and accuracy)
-* Visualization of results using Plotly
+- Dataset generation  
+- Training of a neural network using PyTorch  
+- Tracking training metrics (loss and accuracy)  
+- Visualization of results using Plotly  
 
 Several visualizations are implemented to better understand the model:
+- A 3D scatter plot of the dataset, showing how the classes are distributed  
+![3d scatter1](outputs/3dscatter1.png)
+![3d scatter2](outputs/3dscatter2.png)
+![3d scatter3](outputs/3dscatter3.png)
+- Training curves, illustrating the learning process over epochs  
+![Training curves](outputs/training_curves.png)
+- A 3D decision boundary surface, showing how the model separates the two classes
+![Decision Surface 0.3](outputs/3ddec0.3.png)
+![Decision Surface 0.4](outputs/3ddec0.4.png)
+![Decision Surface 0.5](outputs/3ddec0.5.png)
+![Decision Surface 0.6](outputs/3ddec0.6.png)
+![Decision Surface 0.7](outputs/3ddec0.7.png)
+- A loss landscape visualization, showing how the loss changes when modifying model weights  
+![Loss Landscape](loss_landscape.png)
 
-* A 3D scatter plot of the dataset, showing how the classes are distributed
-* Training curves, illustrating the learning process over epochs
-* A 3D decision boundary surface, showing how the model separates the two classes
-* A loss landscape visualization, showing how the loss changes when modifying model weights
+All components are connected through a single entry point (`main.py`), which runs the entire pipeline and generates all outputs.
 
-All components are connected through a single entry point (main.py), which runs the entire pipeline and generates all outputs.
-
-The goal of the project is to combine model implementation with visual analysis in order to better understand neural network behavior in a non-linear setting.

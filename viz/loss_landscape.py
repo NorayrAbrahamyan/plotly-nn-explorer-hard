@@ -9,6 +9,12 @@ from torch.nn.utils import parameters_to_vector, vector_to_parameters
 
 
 def loss_landscape():
+    """
+    Creates a 3D visualization of the model's loss surface.
+    This function explores how the loss changes when moving the model's weights 
+    in two random directions (alpha and beta). It helps visualize if the 
+    trained model (the red dot) has reached its stable minimum.
+    """
     df = pd.read_csv("data/dataset.csv")
     X = df[['x', 'y', 'z']].values.astype(np.float32)
     y = df['label'].values.astype(np.float32).reshape(-1, 1)

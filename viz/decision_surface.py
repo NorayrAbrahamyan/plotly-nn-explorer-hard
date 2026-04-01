@@ -6,6 +6,13 @@ from sklearn.preprocessing import StandardScaler
 from model.train import FeedforwardNN
 
 def decision_surface():
+    """
+    Visualizes the 3D decision boundary of the trained model.
+    This function creates an interactive Plotly Isosurface plot to show 
+    how the model classifies different regions in 3D space. It includes 
+    a slider to change the probability threshold and overlaps the 
+    original data points for comparison
+    """
     df = pd.read_csv('data/dataset.csv')
     X_data = df[['x', 'y', 'z']].values
     y_data = df['label'].values
